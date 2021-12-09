@@ -18,7 +18,7 @@ const app = express();
 app.use(express.static('../front/build'));
 
 // app config
-app.set('port', process.env.SERVER_PORT ?? '3011');
+app.set('port', process.env.PORT ?? '3091');
 
 // app middleware
 app.use(helmet());
