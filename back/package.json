@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon",
+    "start:dev": "nodemon",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "start": "NODE_ENV=production node build/server.js"
   },
   "keywords": [],
   "author": "",
