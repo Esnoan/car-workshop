@@ -34,8 +34,7 @@ const Location = ({
     axios
       .get(baseURL, {
         headers: {
-          'X-CSCAPI-KEY':
-            'TTZ6SklLY3NyQ0xLMzJCNlZYaHprQ1VueWE4NFVhWGs2YnlBTEFJMw==',
+          'X-CSCAPI-KEY': process.env.REACT_APP_LOCATION_TOKEN ?? '',
         },
       })
       .then((response) => {
@@ -49,8 +48,7 @@ const Location = ({
     axios
       .get(`${baseURL}/${country}/states`, {
         headers: {
-          'X-CSCAPI-KEY':
-            'TTZ6SklLY3NyQ0xLMzJCNlZYaHprQ1VueWE4NFVhWGs2YnlBTEFJMw==',
+          'X-CSCAPI-KEY': process.env.REACT_APP_LOCATION_TOKEN ?? '',
         },
       })
       .then((response) => {
@@ -62,8 +60,7 @@ const Location = ({
     axios
       .get(`${baseURL}/${country}/states/${state}/cities`, {
         headers: {
-          'X-CSCAPI-KEY':
-            'TTZ6SklLY3NyQ0xLMzJCNlZYaHprQ1VueWE4NFVhWGs2YnlBTEFJMw==',
+          'X-CSCAPI-KEY': process.env.REACT_APP_LOCATION_TOKEN ?? '',
         },
       })
       .then((response) => {
