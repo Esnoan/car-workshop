@@ -1,43 +1,33 @@
 {
-  "name": "car-workshop",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
-  },
+  "name": "@car-workshop/main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "front": "npm start -w @car-workshop/front",
+    "back": "npm start -w @car-workshop/back",
+    "build-front": "npm run build -w @car-workshop/front",
+    "build-back": "npm run build -w @car-workshop/back",
+    "test-front": "npm test -w @car-workshop/front",
+    "test-back": "npm test -w @car-workshop/back",
+    "build": "npm run build-front && npm run build-back",
+    "start": "npm run back"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "keywords": [],
+  "author": "@Esnoan - Andres Urbano A.",
+  "license": "ISC",
+  "workspaces": [
+    "front",
+    "back"
+  ],
+  "devDependencies": {
+    "ts-node": "~8.3.0",
+    "@types/node": "^12.11.1",
+    "typescript": "^4.1.2",
+    "@types/jest": "^26.0.15",
+    "jest": "26.6.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "engines": {
+    "npm": "8.0.0"
   }
 }
